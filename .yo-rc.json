@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "hackinghealth",
+    "packageName": "fr.hackinghealth",
+    "packageFolder": "fr/hackinghealth",
+    "authenticationType": "session",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "gulp",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "2c638ec0d5b37e0ca0aa892f7deb55e022221fba",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
