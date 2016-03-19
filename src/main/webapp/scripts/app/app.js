@@ -122,6 +122,26 @@ angular.module('hackinghealthApp', ['LocalStorageModule', 'tmh.dynamicLocale', '
                         return $translate.refresh();
                     }]
                 }
+            })
+            .state('inStock', {
+                parent: 'entity',
+                url: '/inStock',
+                data: {
+                    pageTitle: 'hackinghealthApp.stock.home.title',
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/stock/in-stock.html',
+                        controller: 'StockController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('stock');
+                        $translatePartialLoader.addPart('global');
+                        return $translate.refresh();
+                    }]
+                }
             });
 
         $httpProvider.interceptors.push('errorHandlerInterceptor');

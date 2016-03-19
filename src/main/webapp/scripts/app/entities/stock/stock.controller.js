@@ -25,4 +25,12 @@ angular.module('hackinghealthApp')
                 id: null
             };
         };
+        
+        $scope.inStock = function() {
+            $state.go("inStock");
+        }
+
+        $scope.goHome = function () {
+            $state.go("home");
+        }
     });
