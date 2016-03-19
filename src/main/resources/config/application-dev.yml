@@ -19,14 +19,11 @@ spring:
         livereload:
             enabled: false # we use Grunt + BrowserSync for livereload
     datasource:
-        driver-class-name: org.postgresql.ds.PGSimpleDataSource
-        url: jdbc:postgresql://localhost:1521/hackinghealth
-        name:
-        username: hackinghealth
-        password: hackinghealth
+        driver-class-name: org.h2.jdbcx.JdbcDataSource
+        url: jdbc:h2:file:~/hackinghealth
     jpa:
-        database-platform: fr.hackinghealth.domain.util.FixedPostgreSQL82Dialect
-        database: POSTGRESQL
+        database-platform: fr.hackinghealth.domain.util.FixedH2Dialect
+        database: H2
         show_sql: true
         properties:
             hibernate.cache.use_second_level_cache: false
