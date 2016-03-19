@@ -1,8 +1,7 @@
 <div ng-cloak>
     <div class="row">
-        <div class="btn-group">
-            <label class="btn btn-primary" ng-model="medicineChest.open" uib-btn-radio="'Middle'">Middle</label>
-            <label class="btn btn-primary" ng-model="medicineChest.open" uib-btn-radio="'Right'">Right</label>
-        </div>
+        <form ng-submit="scanCIP()">
+            <input ng-model="cip"/>
+        </form>
     </div>
 </div>

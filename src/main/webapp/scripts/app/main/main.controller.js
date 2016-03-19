@@ -7,4 +7,7 @@ angular.module('hackinghealthApp')
             $scope.isAuthenticated = Principal.isAuthenticated;
             
         });
+        $scope.scanCIP = function(){
+            alert($scope.cip);
+        }
     });
