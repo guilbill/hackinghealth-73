@@ -1,0 +1,32 @@
+<div class="row" style="text-align: center;">
+    <div class="col-md-12" style="text-align:center">
+        <h1>Vous retirez</h1>
+        <input class="input-lg" type="number" ng-model="nombreSortant" style="
+    width: 15%;
+    font-size: 30px;">
+        <h1>comprimés de Paracétamol.</h1>
+    </div>
+<br>
+    <div>
+        <div class="btn-group">
+            <label class="btn btn-success" style="
+    font-size: 30px;" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable ng-click="goHome()">Valider</label>
+        </div>
+    </div>
+    <br>
+    <div>
+        <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" style="font-size: 25px" aria-hidden="true"></span>
+            <span style="font-size: 25px"> Ne pas délivrer à Elliot (2 ans)</span>
+        </div>
+        <div class="alert alert-warning" role="alert">
+            <span class="glyphicon glyphicon-ban-circle" style="font-size: 25px" aria-hidden="true"></span>
+            <span style="font-size: 25px"> Le médicament fait l'ojet d'un rappel de lot</span>
+        </div>
+        <div class="alert alert-info" role="alert">
+            <span class="glyphicon glyphicon-time" style="font-size: 25px" aria-hidden="true"></span>
+            <span style="font-size: 25px"> Le même comprimé a déjà été sorti il y a 1 heure</span>
+        </div>
+    </div>
+</div>
+

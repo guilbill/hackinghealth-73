@@ -1,8 +1,15 @@
 <div class="row" style="text-align: center;">
+    <br><br><br><br><br><br>
     <div class="col-md-12" style="text-align:center">
         <h1>Vous avez ajouté 10 comprimés de Paracétamol.</h1>
     </div>
+    <br><br>
+    <div>
+        <h3>Voulez-vous ajouter un stock minimum?</h3>
+        <div class="btn-group">
+            <label class="btn btn-success" ng-model="radioModel" uib-btn-radio="'Left'" uncheckable>Oui</label>
+            <label class="btn btn-danger" ng-model="radioModel" uib-btn-radio="'Middle'" uncheckable ng-click="goHome()">Non</label>
+        </div>
+    </div>
 </div>
-<div class="row" style="text-align:center" ng-click="goHome()">
-    <img src="../assets/images/plus.png" alt="">
-</div>
+
