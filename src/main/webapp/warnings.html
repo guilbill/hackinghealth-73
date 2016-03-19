@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="mobile.html"> <img alt="Brand"
+					src="./assets/images/plus-icon.png"></a>
+				<!-- 				<a class="navbar-brand" href="#">Brand</a> -->
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="inventory.html">Inventaire <span
+							class="sr-only">(current)</span></a></li>
+					<li><a href="command.html">Commande</a></li>
+					<li><a href="expires.html">Périmés</a></li>
+					<li><a href="warnings.html">Alertes</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="panel panel-danger">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<img alt="Brand" src="./assets/images/danger.png" /> Alertes sanitaires</h3>
+		</div>
+		<div class="panel-body" style="color: #C9302C">Un médicament dans votre armoire est
+			concerné</div>
+
+		<div class="list-group">
+			<a href="#" class="list-group-item">
+				<h4 class="list-group-item-heading">Fosfomycine Adules 3g,
+					granulés pour solution buvable en sachet</h4>
+				<p class="list-group-item-text">Rappel de lot - Lot 550589 (exo:
+					03/2018)</p>
+			</a>
+		</div>
+	</div>
+
+	<div class="panel panel-warning">
+		<div class="panel-heading">
+			<h3 class="panel-title">
+				<img alt="Brand" src="./assets/images/door_out.png" /> Alertes ouverture de porte</h3>
+		</div>
+		<div class="panel-body">La porte de BERNA Paul a été ouverte 15
+			fois en 2 jours.</div>
+	</div>
+
+</body>
+</html>
