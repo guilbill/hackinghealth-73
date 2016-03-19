@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.eclipse.persistence.oxm.annotations.XmlPath;
 
-import fr.hackinghealth.domain.vidal.AbstractResponse;
+import fr.hackinghealth.domain.vidal.Response.AbstractResponse;
 import fr.hackinghealth.domain.vidal.entry.PackageVidal;
 
 /**

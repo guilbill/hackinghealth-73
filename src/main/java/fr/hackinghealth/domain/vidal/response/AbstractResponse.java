@@ -10,7 +10,7 @@ import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlElementRefs;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "feed")
+
 @XmlAccessorType(XmlAccessType.NONE)
 public class AbstractResponse {
     

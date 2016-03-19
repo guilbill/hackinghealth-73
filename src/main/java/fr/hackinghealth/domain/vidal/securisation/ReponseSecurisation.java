@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 import org.eclipse.persistence.oxm.annotations.XmlPath;
 
-import fr.hackinghealth.domain.vidal.response.AbstractResponse;
+import fr.hackinghealth.domain.vidal.Response.AbstractResponse;
 
 @XmlRootElement(name="feed")
 public class ReponseSecurisation extends AbstractResponse{
@@ -29,6 +29,30 @@ public class ReponseSecurisation extends AbstractResponse{
         prescriptions = new ArrayList<PrescriptionLine>();
         alerts = new ArrayList<PrescriptionLineAlert>();
     }
+
+	public List<PrescriptionLine> getPrescriptions() {
+		return prescriptions;
+	}
+
+	public void setPrescriptions(List<PrescriptionLine> prescriptions) {
+		this.prescriptions = prescriptions;
+	}
+
+	public List<PrescriptionLineAlert> getAlerts() {
+		return alerts;
+	}
+
+	public void setAlerts(List<PrescriptionLineAlert> alerts) {
+		this.alerts = alerts;
+	}
+
+	public Patient getPatient() {
+		return patient;
+	}
+
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
  
 	
 }

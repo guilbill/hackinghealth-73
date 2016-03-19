@@ -12,5 +12,6 @@ import javax.xml.bind.annotation.XmlNs;
 import javax.xml.bind.annotation.XmlNsForm;
 import javax.xml.bind.annotation.XmlSchema;
 
+import fr.hackinghealth.domain.vidal.Response.AbstractResponse;
 import fr.hackinghealth.domain.vidal.entry.AbstractEntry;
-import fr.hackinghealth.domain.vidal.response.AbstractResponse;
+
