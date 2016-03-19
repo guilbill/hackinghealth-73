@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="mobile.html"> <img alt="Brand"
+					src="./assets/images/plus-icon.png"></a>
+				
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="expires.html">Périmés<span
+							class="sr-only">(current)</span></a></li>
+					<li><a href="command.html">Commande</a></li>
+					<li><a href="inventory.html">Inventaire</a></li>
+					<li><a href="warnings.html">Alertes</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div class="container" ng-app="mainApp">
+		<div class="table-responsive">
+			<table class="table" ng-controller="inventoryController">
+				<thead>
+					<tr>
+						<th style="center">Désignation</th>.
+						<th>Nombre d'unités</th>
+						<th>Date de péremption</th>						
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="medicine in medicineChest.medicines">
+						<td>{{ medicine.designation }}</td>
+						<td>{{ medicine.stock }}</td>
+						<td>{{ medicine.datePeremption }}</td>						
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script>
+		var mainApp = angular.module("mainApp", []);
+
+		mainApp.controller('inventoryController', function($scope) {
+			$scope.medicineChest = {
+				open : false,
+
+				medicines : [ {
+					id : 0,
+					designation : 'DOLIPRANE 200 mg suppos',
+					stock : 4,
+					datePeremption : '05/2015'
+				}, {
+					id : 1,
+					designation : 'SPASFON Cpr enr Plq/30',
+					stock : 17,
+					datePeremption : '09/2015'
+				}, {
+					id : 2,
+					designation : 'IMODIUM 2 mg Gél Plq/20',
+					stock : 14,
+					datePeremption : '02/2014'
+				}, ],
+
+			};
+		});
+	</script>
+
+	
+</body>
+</html>
