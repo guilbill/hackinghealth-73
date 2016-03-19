@@ -1,11 +1,24 @@
-<div class="row">
-    <div class="col-md-6 ">Entrées</div>
-    <div class="col-md-6">Sorties</div>
+<div class="row" style="text-align: center;">
+    <div class="col-md-6 ">
+        <img src="../assets/images/instock.png">
+    </div>
+    <div class="col-md-6">
+        <img src="../assets/images/outstock.png">
+    </div>
 </div>
-<div class="row">
-    <div>Informations produit</div>
+<br><br>
+<div class="row" style="text-align: center;">
     <div>
-        {{medicine.name}} - {{medicine.cip}}
-        {{medicine.monographie}}
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#monographie"
+                aria-expanded="false" aria-controls="monographie">
+            DOLIPRANE 500mg
+        </button>
+        <div class="collapse" id="monographie">
+            <div class="well">
+                Une monographie :
+                <div>plop</div>
+            </div>
+        </div>
+        
     </div>
 </div>
