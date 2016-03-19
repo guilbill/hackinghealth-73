@@ -1,4 +1,4 @@
-package fr.hackinghealth.domain.vidal;
+package fr.hackinghealth.domain.vidal.Response;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

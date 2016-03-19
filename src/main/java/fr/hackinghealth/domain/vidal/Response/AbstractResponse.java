@@ -1,4 +1,4 @@
-package fr.hackinghealth.domain.vidal;
+package fr.hackinghealth.domain.vidal.Response;
 
 import java.util.ArrayList;
 import java.util.List;
