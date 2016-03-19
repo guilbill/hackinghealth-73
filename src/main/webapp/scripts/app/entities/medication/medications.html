@@ -1,0 +1,62 @@
+<div>
+    <h2 translate="hackinghealthApp.medication.home.title">Medications</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="medication.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="hackinghealthApp.medication.home.createLabel">Create new Medication
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="hackinghealthApp.medication.cip">Cip</span></th>
+                    <th><span translate="hackinghealthApp.medication.name">Name</span></th>
+                    <th><span translate="hackinghealthApp.medication.lotNumber">LotNumber</span></th>
+                    <th><span translate="hackinghealthApp.medication.minStock">MinStock</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medication in medications track by medication.id">
+                    <td><a ui-sref="medication.detail({id:medication.id})">{{medication.id}}</a></td>
+                    <td>{{medication.cip}}</td>
+                    <td>{{medication.name}}</td>
+                    <td>{{medication.lotNumber}}</td>
+                    <td>{{medication.minStock}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="medication.detail({id:medication.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medication.edit({id:medication.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medication.delete({id:medication.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+    "hackinghealthApp": {
+        "medication" : {
+            "home": {
+                "title": "Medications",
+                "createLabel": "Créer un nouveau Medication",
+                "createOrEditLabel": "Créer ou éditer un Medication",
+                "search": "Search for Medication"
+            },
+            "created": "Un nouveau Medication a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Medication avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Medication avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Medication {{ id }} ?"
+            },
+            "detail": {
+                "title": "Medication"
+            },
+            "cip": "Cip",
+            "name": "Name",
+            "lotNumber": "LotNumber",
+            "minStock": "MinStock"
+        }
+    }
+}
+

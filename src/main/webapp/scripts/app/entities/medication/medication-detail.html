@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="hackinghealthApp.medication.detail.title">Medication</span> {{medication.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="hackinghealthApp.medication.cip">Cip</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{medication.cip}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hackinghealthApp.medication.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{medication.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hackinghealthApp.medication.lotNumber">LotNumber</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{medication.lotNumber}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hackinghealthApp.medication.minStock">MinStock</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{medication.minStock}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>
