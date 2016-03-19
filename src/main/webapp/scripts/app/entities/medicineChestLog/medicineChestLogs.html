@@ -1,0 +1,62 @@
+<div>
+    <h2 translate="hackinghealthApp.medicineChestLog.home.title">MedicineChestLogs</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="medicineChestLog.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="hackinghealthApp.medicineChestLog.home.createLabel">Create new MedicineChestLog
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="hackinghealthApp.medicineChestLog.date">Date</span></th>
+                    <th><span translate="hackinghealthApp.medicineChestLog.open">Open</span></th>
+                    <th><span translate="hackinghealthApp.medicineChestLog.medicineChest">medicineChest</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medicineChestLog in medicineChestLogs track by medicineChestLog.id">
+                    <td><a ui-sref="medicineChestLog.detail({id:medicineChestLog.id})">{{medicineChestLog.id}}</a></td>
+                        <td>{{medicineChestLog.date | date:'mediumDate'}}</td>
+                    <td>{{medicineChestLog.open}}</td>
+                    <td>
+                        <a ui-sref="medicineChest.detail({id:medicineChestLog.medicineChest.id})">{{medicineChestLog.medicineChest.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="medicineChestLog.detail({id:medicineChestLog.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medicineChestLog.edit({id:medicineChestLog.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medicineChestLog.delete({id:medicineChestLog.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

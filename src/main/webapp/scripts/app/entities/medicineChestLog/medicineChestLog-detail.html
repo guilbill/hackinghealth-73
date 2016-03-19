@@ -1,0 +1,46 @@
+
+<div>
+    <h2><span translate="hackinghealthApp.medicineChestLog.detail.title">MedicineChestLog</span> {{medicineChestLog.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="hackinghealthApp.medicineChestLog.date">Date</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{medicineChestLog.date | date:'mediumDate'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hackinghealthApp.medicineChestLog.open">Open</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{medicineChestLog.open}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="hackinghealthApp.medicineChestLog.medicineChest">medicineChest</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="medicineChest.detail({id:medicineChestLog.medicineChest.id})">{{medicineChestLog.medicineChest.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

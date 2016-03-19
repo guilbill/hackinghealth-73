@@ -1,0 +1,25 @@
+{
+    "hackinghealthApp": {
+        "medicineChestLog" : {
+            "home": {
+                "title": "MedicineChestLogs",
+                "createLabel": "Créer un nouveau MedicineChestLog",
+                "createOrEditLabel": "Créer ou éditer un MedicineChestLog",
+                "search": "Search for MedicineChestLog"
+            },
+            "created": "Un nouveau MedicineChestLog a été créé avec l'identifiant {{ param }}",
+            "updated": "Le MedicineChestLog avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le MedicineChestLog avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le MedicineChestLog {{ id }} ?"
+            },
+            "detail": {
+                "title": "MedicineChestLog"
+            },
+            "date": "Date",
+            "open": "Open",
+            "medicineChest": "MedicineChest"
+        }
+    }
+}
+
