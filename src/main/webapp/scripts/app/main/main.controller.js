@@ -8,10 +8,10 @@ angular.module('hackinghealthApp')
 
         });
         $scope.scanCIP = function () {
-            if ($scope.cip.indexOf("01034009383589261718110010185") > -1) {
-                alert("Périmé");
-            } else if ($scope.cip.indexOf("01034009363816361717050010C264") > -1){
-                alert("Interaction!");
+            if ($scope.cip.indexOf("3400938358926") > -1) {
+                $state.go('perime');
+            } else if ($scope.cip.indexOf("3400936381636") > -1){
+                $state.go('interaction');
             } else {
                 //Medicine.
                 $state.go('stockAction',

@@ -1,7 +1,15 @@
 package fr.hackinghealth.service;
 
+import java.time.LocalDate;
+import java.time.ZonedDateTime;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+
+import javax.inject.Inject;
+
 import fr.hackinghealth.domain.Authority;
-import fr.hackinghealth.domain.PersistentToken;
 import fr.hackinghealth.domain.User;
 import fr.hackinghealth.repository.AuthorityRepository;
 import fr.hackinghealth.repository.PersistentTokenRepository;
@@ -9,18 +17,13 @@ import fr.hackinghealth.repository.UserRepository;
 import fr.hackinghealth.security.SecurityUtils;
 import fr.hackinghealth.service.util.RandomUtil;
 import fr.hackinghealth.web.rest.dto.ManagedUserDTO;
-import java.time.ZonedDateTime;
-import java.time.LocalDate;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.time.ZonedDateTime;
-import javax.inject.Inject;
-import java.util.*;
 
 /**
  * Service class for managing users.
@@ -175,14 +178,14 @@ public class UserService {
 
     @Transactional(readOnly = true)
     public User getUserWithAuthorities(Long id) {
-        User user = userRepository.findOne(id);
+        User user = userRepository.findOne(3L);
         user.getAuthorities().size(); // eagerly load the association
         return user;
     }
 
     @Transactional(readOnly = true)
     public User getUserWithAuthorities() {
-        User user = userRepository.findOneByLogin(SecurityUtils.getCurrentUser().getUsername()).get();
+        User user = userRepository.findOneByLogin("admin").get();
         user.getAuthorities().size(); // eagerly load the association
         return user;
     }

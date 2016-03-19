@@ -142,6 +142,46 @@ angular.module('hackinghealthApp', ['LocalStorageModule', 'tmh.dynamicLocale', '
                         return $translate.refresh();
                     }]
                 }
+            })
+            .state('interaction', {
+                parent: 'entity',
+                url: '/interaction',
+                data: {
+                    pageTitle: 'hackinghealthApp.stock.home.title',
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/stock/interaction.html',
+                        controller: 'StockController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('stock');
+                        $translatePartialLoader.addPart('global');
+                        return $translate.refresh();
+                    }]
+                }
+            })
+            .state('perime', {
+                parent: 'entity',
+                url: '/perime',
+                data: {
+                    pageTitle: 'hackinghealthApp.stock.home.title',
+                },
+                views: {
+                    'content@': {
+                        templateUrl: 'scripts/app/entities/stock/perime.html',
+                        controller: 'StockController'
+                    }
+                },
+                resolve: {
+                    translatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate, $translatePartialLoader) {
+                        $translatePartialLoader.addPart('stock');
+                        $translatePartialLoader.addPart('global');
+                        return $translate.refresh();
+                    }]
+                }
             });
 
         $httpProvider.interceptors.push('errorHandlerInterceptor');
