@@ -1,12 +1,19 @@
 package fr.hackinghealth.service.vidal;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
 import org.assertj.core.api.Assertions;
+import org.junit.Assert;
 import org.junit.Test;
 
+import fr.hackinghealth.domain.vidal.securisation.AlertType;
+import fr.hackinghealth.domain.vidal.securisation.PrescriptionLineAlert;
 import fr.hackinghealth.domain.vidal.securisation.ReponseSecurisation;
 import fr.hackinghealth.domain.vidal.securisation.input.Patient;
 import fr.hackinghealth.domain.vidal.securisation.input.Patient.BreastFeeding;
@@ -20,24 +27,25 @@ import fr.hackinghealth.service.JerseyClientFactory;
 
 public class SecurisationServiceTest {
 
-	
-	private PrescriptionLine createLine(String drugId, DrugType drugType ) {
-		
+	private PrescriptionLine createLine(String drugId, DrugType drugType) {
+
 		final PrescriptionLine line = new PrescriptionLine();
 		line.setDrugCode(String.format("vidal://package/cip13/%s", drugId));
 
 		return line;
 	}
-	
+
 	@Test
 	public void testSecurisation() throws JAXBException {
-		
-		JerseyClientFactory factory = new JerseyClientFactory("http://apirest-dev.vidal.fr/rest/","9fd557d3","06cbdb4357601927c22dc87d4ea469bc",1000);
-		SecurisationService fixture = factory.getClient(SecurisationService.class);
-		
-		
+
+		JerseyClientFactory factory = new JerseyClientFactory(
+				"http://apirest-dev.vidal.fr/rest/", "9fd557d3",
+				"06cbdb4357601927c22dc87d4ea469bc", 1000);
+		SecurisationService fixture = factory
+				.getClient(SecurisationService.class);
+
 		final Patient patient = new Patient();
-		
+
 		patient.setCreatin(80);
 		patient.setDateOfBirth("2011-12-02T15:11:35.095+01:00");
 		patient.setGender(Gender.MALE);
@@ -45,27 +53,33 @@ public class SecurisationServiceTest {
 		patient.setWeight("80");
 		patient.setBreastFeeding(BreastFeeding.NONE);
 		patient.setHepaticInsufficiency(HepaticInsufficiency.SEVERE);
-		
+
 		final Prescription prescription = new Prescription();
 		prescription.setPatient(patient);
-		
-		PrescriptionLines lines = new PrescriptionLines();
-		lines.getLine().add(createLine("3400932320189",DrugType.PACK));
-		
-		
-		prescription.setLines(lines);
-		
-		
-		final JAXBContext context = JAXBContext.newInstance(Prescription.class);
-		
-		final Marshaller marshall = context.createMarshaller();
-		marshall.marshal(prescription, System.out );
-		
-		
-		ReponseSecurisation reponse = fixture.securisation("9fd557d3","06cbdb4357601927c22dc87d4ea469bc",prescription);
-		
-		
-		Assertions.assertThat(reponse).isNotNull();
-	}
 
+		PrescriptionLines lines = new PrescriptionLines();
+		lines.getLine().add(createLine("3400932320189", DrugType.PACK));
+
+		prescription.setLines(lines);
+
+		final JAXBContext context = JAXBContext.newInstance(Prescription.class);
+
+		final Marshaller marshall = context.createMarshaller();
+		marshall.marshal(prescription, System.out);
+
+		ReponseSecurisation reponse = fixture.securisation("9fd557d3",
+				"06cbdb4357601927c22dc87d4ea469bc", prescription);
+
+		Assertions.assertThat(reponse).isNotNull();
+
+		List<PrescriptionLineAlert> xx = reponse
+				.getAlerts()
+				.stream()
+				.filter(r -> {
+					return AlertType.VidalAlertType.PRECAUTION.equals(r
+							.getAlertType().getType());
+				}).collect(Collectors.toCollection(ArrayList::new));
+
+		Assert.assertNotNull(xx);
+	}
 }
