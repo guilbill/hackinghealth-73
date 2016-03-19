@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Package 33565</title>
+ <link rel="self" type="application/atom+xml" href="/rest/api/package/33565"/>
+ <id>vidal://package/33565</id>
+ <updated>2016-02-18T00:00:00Z</updated>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="PACKAGE">
+  <title>TANAKAN 40 mg/ml S buv Fl/30ml</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/package/33565"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/package/33565/larger-packs" title="LARGER_PACKS"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/package/33565/affiliation-centers" title="AFFILIATION_CENTER"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/package/33565/pds" title="PDS"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/package/33565/pricing-schedule" title="PRICING_SCHEDULE"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/package/33565/ephmras" title="EPHMRA"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/product/15992" title="PRODUCT"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/package/33565/documents/opt?patient=false" title="OPT_DOCUMENT"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/package/33565/documents" title="DOCUMENT"/>
+  <link rel="related" type="application/atom+xml" href="/rest/api/product/15992/atc-classification" title="ATC_CLASSIFICATION"/>
+  <category term="PACKAGE"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://package/33565</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <summary type="text">TANAKAN 40 mg/ml S buv Fl/30ml</summary>
+  <content/>
+  <vidal:id>33565</vidal:id>
+  <vidal:name>TANAKAN 40 mg/ml S buv Fl/30ml</vidal:name>
+  <vidal:dispensationPlace name="PHARMACY">PHARMACY</vidal:dispensationPlace>
+  <vidal:exceptional>false</vidal:exceptional>
+  <vidal:horsGHS>false</vidal:horsGHS>
+  <vidal:itemType name="VIDAL">VIDAL</vidal:itemType>
+  <vidal:cip>3163240</vidal:cip>
+  <vidal:vatRate name="NORMAL">10.0</vidal:vatRate>
+  <vidal:pharmacistPrice>4.6</vidal:pharmacistPrice>
+  <vidal:drugId>15992</vidal:drugId>
+  <vidal:onMarketDate format="yyyy-MM-dd">1975-09-10</vidal:onMarketDate>
+  <vidal:otc>true</vidal:otc>
+  <vidal:cis>66029390</vidal:cis>
+  <vidal:cip13>3400931632405</vidal:cip13>
+  <vidal:shortLabel>TANAKAN 40mg/ml S buv Fl/30ml</vidal:shortLabel>
+  <vidal:tfr>false</vidal:tfr>
+  <vidal:actCode name="PHN">médicament non remboursé</vidal:actCode>
+  <vidal:doseUnit>mesurette</vidal:doseUnit>
+  <vidal:dose>30</vidal:dose>
+  <vidal:marketStatus name="AVAILABLE">Commercialisé</vidal:marketStatus>
+  <vidal:company type="DISTRIBUTOR" vidalId="552">Mayoly-Spindler</vidal:company>
+  <vidal:company type="HOLDER" vidalId="2908">Ipsen Pharma</vidal:company>
+  <vidal:company type="DISTRIBUTOR" vidalId="2908">Ipsen Pharma</vidal:company>
+  <vidal:refundRate name="NR">NR</vidal:refundRate>
+  <vidal:drugInSport>false</vidal:drugInSport>
+  <vidal:narcoticPrescription>false</vidal:narcoticPrescription>
+  <vidal:safetyAlert>true</vidal:safetyAlert>
+  <vidal:perVolume>40mg/ml</vidal:perVolume>
+  <vidal:withoutPrescription>true</vidal:withoutPrescription>
+  <vidal:galenicForm vidalId="461">solution buvable</vidal:galenicForm>
+  <vidal:atc name="N06DX02" vidalId="1698">GINKGO FOLIUM</vidal:atc>
+  <vidal:communityAgreement>false</vidal:communityAgreement>
+ </entry>
+</feed>

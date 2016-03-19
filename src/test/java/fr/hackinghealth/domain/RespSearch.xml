@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <title>Search by name tanakan</title>
+ <link rel="self" type="application/atom+xml" href="/rest/api/search?q=tanakan"/>
+ <id>Link{rel=self, type='application/atom+xml', href='/rest/api/search?q=tanakan', title='null'}</id>
+ <updated>2016-02-18T00:00:00Z</updated>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="PACKAGE">
+  <title>TANAKAN 40 mg Cpr enr Plq PVC/alu/90</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/package/33563" title="PACKAGE"/>
+  <category term="PACKAGE"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://package/33563</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="PACKAGE">
+  <title>TANAKAN 40 mg Cpr enr Plq PVC/alu/30</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/package/33564" title="PACKAGE"/>
+  <category term="PACKAGE"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://package/33564</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="PACKAGE">
+  <title>TANAKAN 40 mg/ml S buv Fl/30ml</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/package/33565" title="PACKAGE"/>
+  <category term="PACKAGE"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://package/33565</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="PACKAGE">
+  <title>TANAKAN 40 mg/ml S buv Fl/90ml</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/package/33566" title="PACKAGE"/>
+  <category term="PACKAGE"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://package/33566</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="PRODUCT">
+  <title>TANAKAN 40 mg cp enr</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/product/15991" title="PRODUCT"/>
+  <category term="PRODUCT"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://product/15991</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="PRODUCT">
+  <title>TANAKAN 40 mg/ml sol buv</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/product/15992" title="PRODUCT"/>
+  <category term="PRODUCT"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://product/15992</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="UCD">
+  <title>TANAKAN 40MG CPR</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/ucd/3026" title="UCD"/>
+  <category term="UCD"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://ucd/3026</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="UCD">
+  <title>TANAKAN 40MG/ML BUV FL30ML</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/ucd/1531" title="UCD"/>
+  <category term="UCD"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://ucd/1531</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+ <entry xmlns:vidal="http://api.vidal.net/-/spec/vidal-api/1.0/" vidal:categories="UCD">
+  <title>TANAKAN 40MG/ML BUV FL90ML</title>
+  <link rel="alternate" type="application/atom+xml" href="/rest/api/ucd/3081" title="UCD"/>
+  <category term="UCD"/>
+  <author>
+   <name>VIDAL</name>
+  </author>
+  <id>vidal://ucd/3081</id>
+  <updated>2016-02-18T00:00:00Z</updated>
+  <content/>
+ </entry>
+</feed>
