@@ -1,0 +1,43 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "medicineChest",
+            "otherEntityName": "medicineChest",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "designation",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "cip",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "vidalId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "numberOfPills",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20160319084033",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "pagination": "no"
+}

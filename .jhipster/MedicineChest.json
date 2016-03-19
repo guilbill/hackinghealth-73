@@ -1,0 +1,17 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "open",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160319083509",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "pagination": "no"
+}

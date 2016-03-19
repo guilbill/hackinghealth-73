@@ -1,0 +1,66 @@
+<div>
+    <h2 translate="hackinghealthApp.medicine.home.title">Medicines</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="medicine.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                        translate="hackinghealthApp.medicine.home.createLabel">Create new Medicine
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span translate="global.field.id">ID</span></th>
+                    <th><span translate="hackinghealthApp.medicine.designation">Designation</span></th>
+                    <th><span translate="hackinghealthApp.medicine.cip">Cip</span></th>
+                    <th><span translate="hackinghealthApp.medicine.vidalId">VidalId</span></th>
+                    <th><span translate="hackinghealthApp.medicine.numberOfPills">NumberOfPills</span></th>
+                    <th><span translate="hackinghealthApp.medicine.medicineChest">medicineChest</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="medicine in medicines track by medicine.id">
+                    <td><a ui-sref="medicine.detail({id:medicine.id})">{{medicine.id}}</a></td>
+                    <td>{{medicine.designation}}</td>
+                    <td>{{medicine.cip}}</td>
+                    <td>{{medicine.vidalId}}</td>
+                    <td>{{medicine.numberOfPills}}</td>
+                    <td>
+                        <a ui-sref="medicineChest.detail({id:medicine.medicineChestId})">{{medicine.medicineChestId}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="medicine.detail({id:medicine.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medicine.edit({id:medicine.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="medicine.delete({id:medicine.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm" translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

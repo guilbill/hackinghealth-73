@@ -1,0 +1,22 @@
+{
+    "hackinghealthApp": {
+        "medicineChest" : {
+            "home": {
+                "title": "MedicineChests",
+                "createLabel": "Create a new MedicineChest",
+                "createOrEditLabel": "Create or edit a MedicineChest",
+                "search": "Search for MedicineChest"
+            },
+            "created": "A new MedicineChest is created with identifier {{ param }}",
+            "updated": "A MedicineChest is updated with identifier {{ param }}",
+            "deleted": "A MedicineChest is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete MedicineChest {{ id }}?"
+            },
+            "detail": {
+                "title": "MedicineChest"
+            },
+            "open": "Open"
+        }
+    }
+}

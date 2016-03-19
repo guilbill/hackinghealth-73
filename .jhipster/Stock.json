@@ -1,0 +1,41 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "medicine",
+            "otherEntityName": "medicine",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "batchNumber",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "numberOfPills",
+            "fieldType": "Double",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "expirationDate",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20160319084456",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "pagination": "no"
+}
