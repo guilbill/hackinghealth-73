@@ -1,12 +1,17 @@
 package fr.hackinghealth.domain.vidal.securisation;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 import javax.xml.bind.annotation.XmlValue;
 
 import org.apache.log4j.Logger;
 
 import com.google.common.base.Strings;
 
+@XmlType
+@XmlAccessorType(XmlAccessType.NONE)
 public class AlertType {
 	 private static final Logger LOGGER = Logger.getLogger(Trigger.class);
     

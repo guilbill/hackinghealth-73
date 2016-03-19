@@ -38,9 +38,7 @@ public class PrescriptionTest {
 		patient.setBreastFeeding(BreastFeeding.NONE);
 		patient.setHepaticInsufficiency(HepaticInsufficiency.SEVERE);
 		
-		final JAXBContext context = JAXBContext.newInstance(Prescription.class);
 		
-		final Marshaller marshall = context.createMarshaller();
 		final StringWriter sw = new StringWriter();
 		
 		
@@ -52,6 +50,9 @@ public class PrescriptionTest {
 		lines.getLine().add(createLine("101",DrugType.PACK));
 		
 		prescription.setLines(lines);
+		final JAXBContext context = JAXBContext.newInstance(Prescription.class);
+		
+		final Marshaller marshall = context.createMarshaller();
 		marshall.marshal(prescription, sw );
 		System.out.println(sw.toString());
 		

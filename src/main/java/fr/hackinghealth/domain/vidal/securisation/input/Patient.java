@@ -38,6 +38,8 @@ public class Patient {
 	private Pathologies pathologies;
 
 
+	
+	
 	public static enum Gender {
 		MALE,
 		FEMALE,
@@ -58,7 +60,12 @@ public class Patient {
 	}
 
 	
-	
+	public Patient() {
+		super();
+		allergies = new Allergies();
+		molecules = new Molecules();
+		pathologies = new Pathologies();
+	}
 	
 
 	public Allergies getAllergies() {

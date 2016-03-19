@@ -17,7 +17,7 @@ public class AbstractResponse {
     public static final String NS_ATOM = "http://www.w3.org/2005/Atom";
     public static final String NS_OPENSEARCH = "http://a9.com/-/spec/opensearch/1.1/";
     
-    @XmlElement(required = true)
+	@XmlElement
     private String title;
     
     @XmlElement(namespace = NS_OPENSEARCH, name = "startIndex")

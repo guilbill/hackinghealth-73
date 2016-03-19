@@ -15,7 +15,9 @@ public class PrescriptionLine extends AbstractEntry{
 	@XmlElement(namespace = NS_VIDAL, name = "safetyAlert")
     private Boolean safetyAlert;
     
-    
+	 @XmlElement(namespace = NS_VIDAL, name = "marketStatus")
+	    private EtatCommercialisation etatCommercialisation;
+	 
     @XmlElement(namespace = NS_VIDAL, name = "code")
     private String code;
     

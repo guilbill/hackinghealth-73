@@ -15,6 +15,9 @@ public 	class Trigger {
 	    @XmlAttribute(name = "id")
 	    private Integer id;
 	    
+	    @XmlValue
+	    private String content;
+	    
 	    private TriggerType type = TriggerType.UNREFERENCED;
 	    
 	    public enum TriggerType {
@@ -56,7 +59,6 @@ public 	class Trigger {
 	        }
 	    }
 	    
-	    @XmlValue
-	    private String content;
+	   
 	 
 }
