@@ -1,13 +1,18 @@
 package fr.hackinghealth.domain;
 
-import java.time.LocalDate;
-
-import javax.persistence.*;
-import javax.validation.constraints.*;
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.time.ZonedDateTime;
 import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  * A MedicineChestLog.
@@ -22,7 +27,7 @@ public class MedicineChestLog implements Serializable {
 
     @NotNull
     @Column(name = "date", nullable = false)
-    private LocalDate date;
+    private ZonedDateTime date;
     
     @NotNull
     @Column(name = "open", nullable = false)
@@ -40,11 +45,11 @@ public class MedicineChestLog implements Serializable {
         this.id = id;
     }
 
-    public LocalDate getDate() {
+    public ZonedDateTime getDate() {
         return date;
     }
     
-    public void setDate(LocalDate date) {
+    public void setDate(ZonedDateTime date) {
         this.date = date;
     }
 

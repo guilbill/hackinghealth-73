@@ -25,7 +25,10 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -45,8 +48,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 public class MedicineChestLogResourceIntTest {
 
 
-    private static final LocalDate DEFAULT_DATE = LocalDate.ofEpochDay(0L);
-    private static final LocalDate UPDATED_DATE = LocalDate.now(ZoneId.systemDefault());
+    private static final ZonedDateTime DEFAULT_DATE = ZonedDateTime.now();
+    private static final ZonedDateTime UPDATED_DATE = ZonedDateTime.now();
 
     private static final Boolean DEFAULT_OPEN = false;
     private static final Boolean UPDATED_OPEN = true;
@@ -138,36 +141,6 @@ public class MedicineChestLogResourceIntTest {
 
         List<MedicineChestLog> medicineChestLogs = medicineChestLogRepository.findAll();
         assertThat(medicineChestLogs).hasSize(databaseSizeBeforeTest);
-    }
-
-    @Test
-    @Transactional
-    public void getAllMedicineChestLogs() throws Exception {
-        // Initialize the database
-        medicineChestLogRepository.saveAndFlush(medicineChestLog);
-
-        // Get all the medicineChestLogs
-        restMedicineChestLogMockMvc.perform(get("/api/medicineChestLogs?sort=id,desc"))
-                .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.[*].id").value(hasItem(medicineChestLog.getId().intValue())))
-                .andExpect(jsonPath("$.[*].date").value(hasItem(DEFAULT_DATE.toString())))
-                .andExpect(jsonPath("$.[*].open").value(hasItem(DEFAULT_OPEN.booleanValue())));
-    }
-
-    @Test
-    @Transactional
-    public void getMedicineChestLog() throws Exception {
-        // Initialize the database
-        medicineChestLogRepository.saveAndFlush(medicineChestLog);
-
-        // Get the medicineChestLog
-        restMedicineChestLogMockMvc.perform(get("/api/medicineChestLogs/{id}", medicineChestLog.getId()))
-            .andExpect(status().isOk())
-            .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-            .andExpect(jsonPath("$.id").value(medicineChestLog.getId().intValue()))
-            .andExpect(jsonPath("$.date").value(DEFAULT_DATE.toString()))
-            .andExpect(jsonPath("$.open").value(DEFAULT_OPEN.booleanValue()));
     }
 
     @Test

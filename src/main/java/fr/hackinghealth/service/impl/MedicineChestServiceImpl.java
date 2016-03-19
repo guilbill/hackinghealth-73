@@ -2,6 +2,8 @@ package fr.hackinghealth.service.impl;
 
 import fr.hackinghealth.service.MedicineChestService;
 import fr.hackinghealth.domain.MedicineChest;
+import fr.hackinghealth.domain.MedicineChestLog;
+import fr.hackinghealth.repository.MedicineChestLogRepository;
 import fr.hackinghealth.repository.MedicineChestRepository;
 import fr.hackinghealth.web.rest.dto.MedicineChestDTO;
 import fr.hackinghealth.web.rest.mapper.MedicineChestMapper;
@@ -11,6 +13,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.ZonedDateTime;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
@@ -31,6 +38,9 @@ public class MedicineChestServiceImpl implements MedicineChestService{
     @Inject
     private MedicineChestMapper medicineChestMapper;
     
+    @Inject
+    private MedicineChestLogRepository chestLogRepository;
+    
     /**
      * Save a medicineChest.
      * @return the persisted entity
@@ -38,10 +48,28 @@ public class MedicineChestServiceImpl implements MedicineChestService{
     public MedicineChestDTO save(MedicineChestDTO medicineChestDTO) {
         log.debug("Request to save MedicineChest : {}", medicineChestDTO);
         MedicineChest medicineChest = medicineChestMapper.medicineChestDTOToMedicineChest(medicineChestDTO);
+        
+        logMedicineChest(medicineChestDTO, medicineChest);
+        
         medicineChest = medicineChestRepository.save(medicineChest);
         MedicineChestDTO result = medicineChestMapper.medicineChestToMedicineChestDTO(medicineChest);
         return result;
     }
+
+	private void logMedicineChest(MedicineChestDTO medicineChestDTO, MedicineChest medicineChest) {
+		if (medicineChestDTO.getId() != null) {
+        	 MedicineChestLog log = buildLog(medicineChest);
+             chestLogRepository.save(log);
+        }
+	}
+
+	private MedicineChestLog buildLog(MedicineChest medicineChest) {
+		MedicineChestLog log = new MedicineChestLog();
+        log.setMedicineChest(medicineChest);
+        log.setOpen(medicineChest.getOpen());
+        log.setDate(ZonedDateTime.now());
+		return log;
+	}
 
     /**
      *  get all the medicineChests.
