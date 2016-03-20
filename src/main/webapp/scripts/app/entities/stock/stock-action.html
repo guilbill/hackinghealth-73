@@ -6,14 +6,65 @@
 <br><br>
 <div class="row" style="text-align: center;">
     <div>
-        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#monographie"
-                aria-expanded="false" aria-controls="monographie" style="font-size:30px">
-            DOLIPRANE 500mg
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">DOLIPRANE 500mg
         </button>
-        <div class="collapse" id="monographie">
-            <div class="well">
-                Une monographie :
-                <div>plop</div>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content" style="padding-bottom: 50px;">
+                    <h1>DOLIPRANE 500mg</h1>
+
+                    <button style="width: 390px; font-size:30px;" class="btn btn-primary" type="button"
+                            data-toggle="collapse" data-target="#indication"
+                            aria-expanded="false" aria-controls="indication" style="font-size:30px">
+                        Indications
+                    </button>
+
+                    <div class="collapse" id="indication">
+                        <div class="well">
+                            Traitement symptomatique des douleurs d'intensité légère à modérée et/ou des états fébriles.
+                        </div>
+                    </div>
+
+                    <button style="width: 390px; font-size:30px;" class="btn btn-info" type="button"
+                            data-toggle="collapse" data-target="#posologie"
+                            aria-expanded="false" aria-controls="posologie" style="font-size:30px">
+                        Posologie et administration
+                    </button>
+
+                    <div class="collapse" id="posologie">
+                        <div class="well">
+                            <h2>Posologie</h2>
+                            Réservé à l'adulte et à l'enfant à partir de 27 kg (soit environ à partir de 8 ans).
+
+                            <h2>Enfant</h2>
+                            Il est impératif de respecter les posologies définies en fonction du poids de l'enfant et
+                            donc de choisir une
+                            présentation adaptée. Les âges approximatifs en fonction du poids sont donnés à titre
+                            d'information.
+                        </div>
+                    </div>
+
+                    <button style="width: 390px; font-size:30px;" class="btn btn-danger" type="button"
+                            data-toggle="collapse" data-target="#contre-indication"
+                            aria-expanded="false" aria-controls="contre-indication" style="font-size:30px">
+                        Contre indications
+                    </button>
+
+                    <div class="collapse" id="contre-indication">
+                        <div class="well">
+                            
+                                Hypersensibilité au paracétamol ou aux autres constituants.
+                                Insuffisance hépatocellulaire sévère.
+                                Comprimé (non effervescent) : Patient présentant une allergie au blé.
+                                Comprimé et gélule : Enfants de moins de 6 ans, en raison des risques de fausse-route.
+                            
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
             </div>
         </div>
 
