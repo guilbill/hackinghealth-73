@@ -234,9 +234,88 @@ ul#strengthBar {
 
 /* jhipster-needle-css-add-main JHipster will add new css style */
 
-.vertical-center {
-    min-height: 100%; /* Fallback for browsers do NOT support vh unit */
-    min-height: 100vh; /* These two lines are counted as one :-)       */
+nav.sidebar-menu-collapsed {
+    width: 50px;
+}
 
-    align-items: center;
+nav.sidebar-menu-expanded {
+    width: 106px;
+}
+
+nav.sidebar {
+    position: fixed;
+    top: 0px;
+    left: -8px;
+    height: 40%;
+    background: none repeat scroll 0 0 #addd01;
+    color: white;
+    padding: 0px 13px;
+    margin-top: 150px;
+    border-radius: 10px;
+    margin-bottom: 152px;
+}
+
+nav.sidebar a#justify-icon {
+    outline: 0;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+}
+
+nav.sidebar a#logout-icon {
+    outline: 0;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+nav.sidebar ul {
+    margin: 0;
+    padding: 0;
+    margin-top: 60px;
+}
+
+nav.sidebar ul li {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    list-style-type: none;
+}
+
+nav.sidebar ul li a.expandable {
+    outline: 0;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav.sidebar ul li a.expandable:hover {
+    color: #d5d5d5;
+}
+
+nav.sidebar ul li a.expandable span.expanded-element {
+    margin-left: 2px;
+    display: none;
+    font-size: 11px;
+    position: relative;
+    bottom: 2px;
+}
+
+nav.sidebar ul li.active {
+    background: none repeat scroll 0 0 #8ab201;
+    border-radius: 4px;
+    text-align: center;
+    margin-left: -4px;
+    padding: 4px;
+}
+
+nav.sidebar ul li.active a.expandable {
+    color: white !important;
+}
+
+nav.sidebar ul li.active a.expandable:hover {
+    color: white !important;
 }
