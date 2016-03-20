@@ -54,9 +54,8 @@
 				</thead>
 				<tbody>
 					<tr  ng-repeat="medicine in medicineChest.medicines" ng-show="medicine.show">
-						<td >{{ medicine.designation }}</td>
-						<td>{{ medicine.stock }}</td>						
-						<td>
+						<td style="overflow-y: hidden">{{ medicine.designation }}</td>
+						<td>{{ medicine.stock }}
 							<img  height="32" width="32" src="./assets/images/command_check.png" ng-click="delete(medicine)" />
 							
 						</td>				
@@ -85,7 +84,7 @@
 					show : true,
 				}, {
 					id : 2,
-					designation : 'COQUELUSEDAL PARACETAMOL 100 mg suppos',
+					designation : 'COQUELUSEDAL 100 mg supo',
 					stock : 3,	
 					show : true
 				}, ],
