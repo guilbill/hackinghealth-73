@@ -1,0 +1,60 @@
+.badge-error {
+  background-color: #b94a48;
+  margin-right: 3px;
+}
+.badge-error:hover {
+  background-color: #953b39;
+  margin-right: 3px;
+}
+.badge-warning {
+  background-color: #f89406;
+  margin-right: 3px;
+}
+.badge-warning:hover {
+  background-color: #c67605;
+  margin-right: 3px;
+}
+.badge-success {
+  background-color: #468847;
+  margin-right: 3px;
+}
+.badge-success:hover {
+  background-color: #356635;
+  margin-right: 3px;
+}
+.badge-info {
+  background-color: #3a87ad;
+  margin-right: 3px;
+}
+.badge-info:hover {
+  background-color: #2d6987;
+  margin-right: 3px;
+}
+.badge-inverse {
+  background-color: #333333;
+  margin-right: 3px;
+}
+
+.badge-inverse:hover {
+  background-color: #1a1a1a;
+  margin-right: 3px;
+}
+
+.thumbnail-menu {
+	display: block;
+	padding: 4px;
+	margin-bottom: 20px;
+	line-height: 1.42857143;
+	background-color: #fff;
+}
+
+.table.appli-header {
+	width:100%;
+	border:1px solid #d4d4d4;
+}
+
+
+
+.table.appli-header th {
+	width:40px;
+}
